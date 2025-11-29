@@ -1,0 +1,182 @@
+/* Reset rapide */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #141414;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e50914;
+    cursor: pointer;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #e50914;
+}
+
+.hero, .series-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+    height: 400px;
+}
+
+.series-hero img.series-banner {
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    transition: transform 0.5s;
+}
+
+.series-hero img.series-banner:hover {
+    transform: scale(1.02);
+}
+
+.hero h1, .series-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.btn-watch {
+    background-color: #e50914;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-watch:hover {
+    background-color: #f6121d;
+    transform: scale(1.1);
+}
+
+.movies {
+    padding: 50px;
+}
+
+.movies h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+}
+
+.movie-card h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8), transparent);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.movie-card:hover h3 {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #141414;
+    border-top: 1px solid #333;
+}
+
+.episodes {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.episodes label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#episode-select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    width: 80%;
+    max-width: 900px;
+    height: 500px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
